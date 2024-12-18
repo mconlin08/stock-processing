@@ -80,16 +80,3 @@ async def etf_over_time(ticker: str, tsdc: TimeSeriesDataController = Depends(Ti
 @app.get("/etfs/{ticker}/quote")
 async def etf_over_time(ticker: str, qdc: QuoteDataController = Depends(QuoteDataController)):
     return await qdc.get_asset_quote_data(ticker, 'e')
-
-
-# -- Robinhood endpoints --
-import src.scripts.get_rh_historical_asset_data as rh_history
-import src.scripts.get_rh_data_for_postgre_db as rh_migrate
-
-@app.get('/rh/assets/historical')
-async def get_rh_assets_historical_data():
-    return await rh_history.main()
-
-@app.get('/rh/assets/migrate')
-async def migrate_assets_to_postgre_db():
-    return await asyncio.run(rh_migrate.main())
