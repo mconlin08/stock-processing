@@ -19,7 +19,7 @@ For stock and etf data.
 ## Example
     curl localhost:8000/stock/aapl/quote
 
-    # Returns quote dat in JSON
+    # Returns quote data in JSON
     {...}
 
 ## Suggestions
