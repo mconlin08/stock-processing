@@ -17,7 +17,7 @@ For stock and etf data.
     {...}
 
 ## Example
-    curl localhost:8000/stock/aapl/quote
+    curl localhost:8000/stocks/aapl/quote
 
     # Returns quote data in JSON
     {...}
@@ -26,7 +26,7 @@ For stock and etf data.
 Format JSON output with python module `json`.
 
 ### Example
-    curl localhost:8000/stock/apple/quote | python -m json.tool
+    curl localhost:8000/stocks/apple/quote | python -m json.tool
 
 ---
 
