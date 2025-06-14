@@ -5,5 +5,3 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8000:80
-    env_file:
-      - .dockerenv
